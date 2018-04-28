@@ -1,0 +1,2 @@
+# zhihu_blockPrivacyPolicy
+破解知乎网页端不同意隐私协议就没法用的油猴脚本
