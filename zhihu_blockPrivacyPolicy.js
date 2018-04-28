@@ -11,4 +11,4 @@ if (model) {
 model.remove()
 document.querySelector('html').style = ""
 }
-}, 1000) 
+}, 3000) 
