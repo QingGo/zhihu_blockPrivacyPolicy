@@ -9,14 +9,14 @@ var __retryTime = 1000;
 var haveDeleted = false;
 
 function __retryFindAndDel(){
-	var __timer = setTimeout(function () {
-		var model = document.querySelector('div.Modal-wrapper');
-		if (model) {
-		model.remove();
-		document.querySelector('html').style = "";
-		haveDeleted = true;
+    var __timer = setTimeout(function () {
+        var model = document.querySelector('div.Modal-wrapper');
+        if (model) {
+        model.remove();
+        document.querySelector('html').style = "";
+        haveDeleted = true;
         }
-    }, __retryTime) 
+    }, __retryTime)
     __retryTime *= 2;
 }
 
