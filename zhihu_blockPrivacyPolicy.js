@@ -13,11 +13,11 @@ function __retryFindAndDel(){
         if (model) {
             model.remove();
             document.querySelector('html').style = "";
-            clearInterval(__timer)
+            clearInterval(__timer);
         }
         __retryTime *= 2;
-    		console.log(__retryTime);
-    }, __retryTime)
+    	//console.log(__retryTime);
+    }, __retryTime);
 }
 
-var __timer=self.setInterval("__retryFindAndDel();",500)
+var __timer=self.setInterval(__retryFindAndDel ,500);
