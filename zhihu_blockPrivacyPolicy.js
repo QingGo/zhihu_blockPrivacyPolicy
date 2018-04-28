@@ -1,12 +1,13 @@
 // ==UserScript==
-// @name     zhihu_blockPrivacyPolicy
+// @name     zhihu block
 // @version  1
 // @grant    none
+// @match  *://*.zhihu.com/*
 // ==/UserScript==
 
 var __t = 0;
 var __timer = setTimeout(function () {
-var model = document.querySelector('body > div:nth-child(7)');
+var model = document.querySelector('div.Modal-wrapper');
 if (model) {
 model.remove()
 document.querySelector('html').style = ""
