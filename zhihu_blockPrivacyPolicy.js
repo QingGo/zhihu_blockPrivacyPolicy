@@ -16,7 +16,7 @@ function __retryFindAndDel(){
         document.querySelector('html').style = "";
         haveDeleted = true;
         }
-    }, __retryTime)
+    }, __retryTime);
     __retryTime *= 2;
 }
 
