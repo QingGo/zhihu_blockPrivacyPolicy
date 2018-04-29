@@ -5,19 +5,18 @@
 // @match  *://*.zhihu.com/*
 // ==/UserScript==
 
-var __retryTime = 1000;
+var __retryTime = 100;
 
 function __retryFindAndDel(){
-	setTimeout(function(){
-        var model = document.querySelector('div.Modal-wrapper');
-        if (model) {
-            model.remove();
-            document.querySelector('html').style = "";
-            clearInterval(__timer);
-        }
+    var model = document.querySelector('div.Modal-wrapper');
+    if (model) {
+        model.remove();
+        document.querySelector('html').style = "";
+    } else {
+        setTimeout(__retryFindAndDel, __retryTime);
+        console.log(__retryTime);
         __retryTime *= 2;
-    	//console.log(__retryTime);
-    }, __retryTime);
+    }
 }
 
-var __timer=self.setInterval(__retryFindAndDel ,500);
+__retryFindAndDel()
