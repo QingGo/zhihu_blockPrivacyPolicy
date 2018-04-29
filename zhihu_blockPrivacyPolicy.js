@@ -14,9 +14,9 @@ function __retryFindAndDel(){
         document.querySelector('html').style = "";
     } else {
         setTimeout(__retryFindAndDel, __retryTime);
-        console.log(__retryTime);
+        //console.log(__retryTime);
         __retryTime *= 2;
     }
 }
 
-__retryFindAndDel()
+__retryFindAndDel();
